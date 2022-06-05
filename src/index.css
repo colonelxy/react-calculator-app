@@ -31,7 +31,7 @@ body {
 
 .buttonBox {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(5,1fr);
   gap: 1rem;
 }
 
@@ -54,9 +54,12 @@ body {
 
 .equals {
   background: #4542e2;
-  grid-column:3/5;
+  grid-column:3/6;
 }
 
 .opt {
   background: #f79505;
+}
+.ext {
+  background: #3ed38d;
 }

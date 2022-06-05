@@ -7,10 +7,10 @@ import Button from './components/Button';
 import CalcProvider from './context/calcContext';
 
 const btnValues = [
-  ["C", "+-", "%", "/"],
-  [7, 8, 9, "x"],
-  [4, 5, 6, "-"],
-  [1, 2, 3, "+"],
+  ["C", "+-", "%", "/","√"],
+  [7, 8, 9, "x", "disc"],
+  [4, 5, 6, "-", 'log'],
+  [1, 2, 3, "+","sin"],
   [0, ".", "="],
 ];
 
