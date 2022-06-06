@@ -73,7 +73,7 @@ const equalsClick = () => {
                 "-": (a, b) => a - b,
                 "x": (a, b) => a * b,
                 "/": (a, b) => a / b,
-                
+                "√": (a, b) => Math.pow(a, 1/b),
             }
             return result[sign](a, b);
         }
@@ -103,12 +103,24 @@ const invertClick = () => {
     })
 }
 //User click root
-const sqrtClick = () => {
-    setCalc({
-        num: Math.sqrt(calc.num),
-        res: Math.sqrt(calc.res)
-    })
+/*
+const nthRootClick = () => {
+    if (calc.res && calc.num) {
+        const nthRoot = (a, b, sign) => {
+            const out= {
+                "√" : (a, b) => Math.pow(a, 1/b)
+                
+            }
+            return out[sign](a, b);
+        }
+        setCalc({
+            res: nthRoot(calc.res, calc.num, calc.sign),
+            sign: '',
+            num: 0
+        })
+    }
 }
+*/
 
     const handleBtnClick = ()=> {
         const results = {
@@ -121,7 +133,8 @@ const sqrtClick = () => {
             "=" : equalsClick,
             "%" : percentClick,
             "+-": invertClick, 
-            "√"  : sqrtClick    }
+            "√"  : signClick,  
+          }
         if (results[value]) {
             return results[value]()
         } else {
